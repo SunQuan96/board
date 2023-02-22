@@ -24,7 +24,6 @@ brush.onclick = function () {
 black.onclick = function () {
   ctx.fillStyle = "black";
   ctx.strokeStyle = "black";
-  ctx.lineCap = "round";
   black.classList.add("active");
   red.classList.remove("active");
   yellow.classList.remove("active");
@@ -190,6 +189,7 @@ function drawLine(x1, y1, x2, y2) {
   ctx.lineTo(x2, y2);
   ctx.stroke();
   ctx.closePath();
+  ctx.lineCap = "round";
 }
 
 function autoSetCanvasSize(canvas) {
